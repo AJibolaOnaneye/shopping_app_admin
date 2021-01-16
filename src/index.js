@@ -12,9 +12,9 @@ window.store = store;
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <React.StrictMode>
+      <React.Fragment>
         <App />
-      </React.StrictMode>
+      </React.Fragment>
     </Router>
   </Provider>,
   document.getElementById('root')
