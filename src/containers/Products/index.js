@@ -258,8 +258,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../actions";
 import Modal from "../../components/UI/Modal";
 import './style.css';
+import { generatePublicUrl } from "../../urlConfig";
 
-const Producsts = (props) => {
+const Products = (props) => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState("");
@@ -320,7 +321,6 @@ const Producsts = (props) => {
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th>Product Pictures</th>
             <th>Category</th>
           </tr>
         </thead>
@@ -333,8 +333,7 @@ const Producsts = (props) => {
             <td>{product.name}</td>
             <td>{product.price}</td>
             <td>{product.quantity}</td>
-            <td>--</td>
-            <td></td>
+            <td>{product.category.name}</td>
           </tr>
             ) : null
           }
@@ -353,7 +352,7 @@ const Producsts = (props) => {
     return(
     <Modal
         show={show}
-        handleClose={handleCloseProductDetailsModal}
+        handleClose={handleClose}
         modalTitle={"Add New Product"}
       >
         <Input
@@ -446,7 +445,7 @@ const Producsts = (props) => {
 
           <Col md={6}> 
           <label className='key'>Category</label>
-          <p className='value'>--</p>
+          <p className='value'>{productDetails.category.name}</p>
            </Col>
         </Row>
         <Row>
@@ -457,11 +456,11 @@ const Producsts = (props) => {
         </Row>
         <Row>
           <Col > 
-          <label>Product Pictures</label>
+          <label className='key'>Product Pictures</label>
           <div style={{display: 'flex'}}>
           {productDetails.productPictures.map(picture => 
             <div className='productImgContainer'>
-              <img src={`http://localhost:2000/public/${picture.img}`}/> 
+              <img src={generatePublicUrl(picture.img)}/> 
             </div>
             )}
           </div>
@@ -498,4 +497,4 @@ const Producsts = (props) => {
   );
 };
 
-export default Producsts;
+export default Products;
