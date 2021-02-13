@@ -11,7 +11,7 @@ import { isUserLoggedIn, getAllCategory, getInitialData } from './actions';
 import Products from './containers/Products';
 import Orders from './containers/Orders';
 // import Category from './containers/Category';
-// import NewPage from './containers/NewPage';
+import NewPage from './containers/NewPage';
 import logo from './logo.svg';
 import Category from './containers/Category';
 
@@ -31,8 +31,6 @@ function App() {
     if(auth.authenticate){
       dispatch(getInitialData());
     }
-
-  // dispatch(getAllCategory())
     
 
   }, [auth.authenticate]);
@@ -43,9 +41,10 @@ function App() {
       <React.Fragment>
       <Switch>
         <PrivateRoute path="/" exact component={Home} />
-        <PrivateRoute path="/category" exact component={Category} />
-        <PrivateRoute path="/products" exact component={Products} />
-        <PrivateRoute path="/orders" exact component={Orders} />
+        <PrivateRoute path="/page" component={NewPage} />
+        <PrivateRoute path="/category" component={Category} />
+        <PrivateRoute path="/products" component={Products} />
+        <PrivateRoute path="/orders"  component={Orders} />
   
         <Route path="/signin" component={Signin} />
         <Route path="/signup" component={Signup} />

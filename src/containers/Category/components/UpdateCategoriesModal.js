@@ -117,4 +117,5 @@ const UpdateCategoriesModal = (props) => {
     );
 }
 
+
 export default UpdateCategoriesModal;
