@@ -4,9 +4,9 @@ import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import Input from "../../components/UI/Input";
 import { Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { logup } from '../../actions/user.actions'
+import { logup } from "../../actions/user.actions";
 import { useEffect } from "react";
-import Spinner from './Spinner'
+import Spinner from "./Spinner";
 
 /**
  * @author
@@ -22,7 +22,6 @@ const Signup = (props) => {
   const auth = useSelector((state) => state.auth);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
-
 
   useEffect(() => {
     if (!user.loading) {
@@ -55,7 +54,6 @@ const Signup = (props) => {
   }
 
   return (
-    
     <Layout>
       <Container>
         {/* {user.message} */}
