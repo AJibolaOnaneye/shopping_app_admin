@@ -1,7 +1,6 @@
-const baseUrl = `http://localhost:2000` ;
-// || "https://flipkart-rest-server.herokuapp.com";
+const baseUrl = "https://shopper-back-server.herokuapp.com/";
 
-export const api = `http://localhost:2000/api`;
+export const api = `${baseUrl}/api`;
 
 export const generatePublicUrl = (fileName) => {
   return `${baseUrl}/public/${fileName}`;
