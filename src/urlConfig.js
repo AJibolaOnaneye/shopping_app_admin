@@ -1,4 +1,4 @@
-const baseUrl = "https://shopper-back-server.herokuapp.com/";
+const baseUrl = "https://shopper-back-server.herokuapp.com";
 
 export const api = `${baseUrl}/api`;
 
