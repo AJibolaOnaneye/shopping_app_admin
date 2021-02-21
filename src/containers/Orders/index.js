@@ -136,65 +136,7 @@ const Orders = (props) => {
         </Card>
       ))}
     </Layout>
-
-
-    // <Layout sidebar>
-    //     <Card headerLeft="ORDER_ID">
-    //         <div
-    //         style={{
-    //             boxSizing: "border-box",
-    //             padding: "100px"
-    //         }}
-    //         >
-    //             <div className="orderTrack">
-    //                 <div className="orderStatus">
-    //                     <div className="point"></div>
-    //                     <div className="orderInfo">
-    //                         <div className="status"> Ordered</div>
-    //                         <div className="date"> Fri, 2020</div>
-    //                     </div>
-    //                 </div>
-    //                 <div className="orderStatus">
-    //                     <div className="point"></div>
-    //                     <div className="orderInfo">
-    //                         <div className="status"> Packed</div>
-    //                         <div className="date"> Fri, 2020</div>
-    //                     </div>
-    //                 </div>
-    //                 <div className="orderStatus">
-    //                     <div className="point"></div>
-    //                     <div className="orderInfo">
-    //                         <div className="status">Shipped</div>
-    //                         <div className="date"> Fri, 2020</div>
-    //                     </div>
-    //                 </div>
-    //                 <div className="orderStatus">
-    //                     <div className="point"></div>
-    //                     <div className="orderInfo">
-    //                         <div className="status">Delivered</div>
-    //                         <div className="date"> Fri, 2020</div>
-    //                     </div>
-    //                 </div>
-
-    //             </div>
-            
-
-    //         </div>
-    //     </Card>
-    // </Layout>
   );
 };
 
 export default Orders;
-
-// import React from 'react'
-
-// const Orders = () => {
-//     return (
-//         <div>
-            
-//         </div>
-//     )
-// }
-
-// export default Orders
